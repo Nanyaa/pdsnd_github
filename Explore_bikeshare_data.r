@@ -74,6 +74,8 @@ ggplot(chicago, aes(month)) + geom_histogram(bins = 6, color = I('grey'))+
   scale_x_continuous(breaks = seq(1,6,1))+ scale_y_continuous(breaks = seq(0,50000, 200))+
   xlab("Month Number") +  ylab("Count Value")+ ggtitle("Most Popular Months in Chicago")
 
+print("Most popular months are shown through the visualization")
+
 #Count of travellers by gender in New York
 new_york %>% 
   group_by(Gender) %>% filter(!is.na(Gender))%>%
@@ -104,5 +106,7 @@ summary(chicago$`Trip.Duration`)
 ggplot(data = subset(chicago, !is.na(Gender)), aes("Gender",`Trip.Duration`, fill = Gender)) + geom_boxplot()+  
   scale_y_continuous(limits = c(0,2000))+
   xlab("Gender") +  ylab("Time in Seconds ")+ ggtitle("Trip duration in Chicago")
+
+print("Washington does not have enough data around gender and trip duration")
 
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
