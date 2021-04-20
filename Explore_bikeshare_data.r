@@ -106,4 +106,6 @@ ggplot(data = subset(chicago, !is.na(Gender)), aes("Gender",`Trip.Duration`, fil
   scale_y_continuous(limits = c(0,2000))+
   xlab("Gender") +  ylab("Time in Seconds ")+ ggtitle("Trip duration in Chicago")
 
+print("Washington does not have enough data around gender and trip duration")
+
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
