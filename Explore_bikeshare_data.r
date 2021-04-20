@@ -4,6 +4,7 @@ new_york = read.csv('new_york_city.csv')
 washington = read.csv('washington.csv')
 chicago = read.csv('chicago.csv')
 
+#The head function enables us view a portion of the dataset to have a clearer idea of what we're dealing with
 #Exploring the New York dataset by viewing the first few rows and columns
 head(new_york)
 
